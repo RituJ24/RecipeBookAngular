@@ -1,0 +1,25 @@
+<style>
+    button{
+        border-radius: 4px;
+        background-color: gray; 
+        color: white;
+    }
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+</style>
+<div class="row">
+    <div class="col-sm-8">
+        <button class="btn" (click)="onNewRecipe()">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-15">
+        <app-recipe-item 
+            *ngFor="let item of recipes; let i = index"
+            [recipe]="item"
+            [index]="i"></app-recipe-item>
+    </div>
+</div>
